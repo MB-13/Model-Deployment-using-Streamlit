@@ -2,3 +2,4 @@ streamlit==1.36.0
 tensorflow==2.16.2
 opencv-python-headless==4.5.5.64
 Pillow==8.3.2
+zlib
