@@ -1,1 +1,7 @@
+streamlit
 tensorflow
+tensorflow.keras
+cv2
+PIL
+numpy
+keras.models
