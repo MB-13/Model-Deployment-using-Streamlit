@@ -25,14 +25,16 @@ st.title("Brain-Tumor-Classification")
 file = st.file_uploader("Please upload an flower image", type=["jpg", "png"])
 
 
-def import_and_predict(image_data, model):
-    size = (224, 224)
-    image = ImageOps.fit(image_data.convert('RGB'), size, Image.LANCZOS)
-    img = np.asarray(image)
-    img_reshape = img[np.newaxis, ...]
-    prediction = model.predict(img_reshape)
-
-    return prediction
+def import_and_predict(image, model):
+    try:
+        img = image.resize((224, 224))
+        img = np.array(img) / 255.0
+        img_reshape = img[np.newaxis, ...]
+        prediction = model.predict(img_reshape)
+        return prediction
+    except Exception as e:
+        st.error(f"Error during prediction: {e}")
+        return None
 
 
 if file is None:
