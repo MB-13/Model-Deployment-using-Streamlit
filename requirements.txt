@@ -1,6 +1,6 @@
-keras==3.4.1
-numpy==2.0.0
-Pillow==10.3.0
+tensorflow
+keras
+numpy
+Pillow
 pip
-streamlit==1.30.0
-tensorflow==2.16.2
+streamlit
