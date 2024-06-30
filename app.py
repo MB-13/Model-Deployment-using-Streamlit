@@ -22,7 +22,7 @@ with st.spinner('loading model into memory......'):
 
 st.title("Brain-Tumor-Classification")
 
-file = st.file_uploader("Please upload an flower image", type=["jpg", "png"])
+file = st.file_uploader("Please upload an image of MRI", type=["jpg", "png"])
 
 
 def import_and_predict(image, model):
