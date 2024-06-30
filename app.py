@@ -33,7 +33,6 @@ def import_and_predict(image, model):
         prediction = model.predict(img_reshape)
         return prediction
     except Exception as e:
-        st.error(f"Error during prediction: {e}")
         return None
 
 
