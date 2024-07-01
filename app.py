@@ -9,7 +9,7 @@ from keras.models import load_model
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 
-# @st.cache(allow_output_mutation=True)
+@st.cache(allow_output_mutation=True)
 def load_my_model():
     loaded_model = load_model('bt_fun.h5')
     return loaded_model
